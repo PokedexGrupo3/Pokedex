@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="pokemonNumber">
+        <item name="android:fontFamily">Lato</item>
+        <item name="android:textColor">#FF47525E</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <style name="pokemonName">
+        <item name="android:fontFamily">Lato</item>
+        <item name="android:textColor">#FF47525E</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

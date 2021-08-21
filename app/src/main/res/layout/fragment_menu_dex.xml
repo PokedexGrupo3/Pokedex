@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5154"
+    tools:context=".MenuDexFragment">
+
+
+    <ImageView
+        android:id="@+id/imgPokedex"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/pokedex_pokedexedit"
+        android:contentDescription="Pokedex"/>
+
+    <ImageView
+        android:id="@+id/imgDex2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgPokedex"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+    <ImageView
+        android:id="@+id/imgDex3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgPokedex"
+        app:layout_constraintTop_toBottomOf="@id/imgDex2"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+    <ImageView
+        android:id="@+id/imgDex4"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPokedex"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+    <ImageView
+        android:id="@+id/imgDex6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgDex4"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+    <ImageView
+        android:id="@+id/imgDex7"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@id/imgDex6"
+        app:layout_constraintTop_toBottomOf="@id/imgDex4"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+    <ImageView
+        android:id="@+id/imgDex8"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@id/imgDex7"
+        app:layout_constraintTop_toBottomOf="@id/imgDex4"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+    <ImageView
+        android:id="@+id/imgDex9"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@id/imgDex6"
+        app:layout_constraintTop_toBottomOf="@id/imgDex7"
+        android:src="@drawable/pokedex_pokedexedit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
