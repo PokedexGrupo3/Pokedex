@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_fragmentMenuDex_to_pokemonDataFragment"
             app:destination="@id/pokemonDataFragment" />
+        <action
+            android:id="@+id/action_fragmentMenuDex_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
     </fragment>
     <fragment
         android:id="@+id/pokemonDataFragment"

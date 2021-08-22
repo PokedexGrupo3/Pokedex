@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pokedex.databinding.FragmentMenuDexBinding
 import com.example.pokedex.databinding.FragmentPokemonDataBinding
 import com.example.pokedexmock.adapter.Pokemons
 
@@ -15,10 +17,7 @@ class PokemonDataFragment : Fragment() {
 
     private var binding:FragmentPokemonDataBinding? = null
 
-    private lateinit var pokemonview: View
-    private lateinit var recyclerView: RecyclerView
-
-    private val listaPokemons = arrayListOf(
+    var listaPokemons = listOf(
         Pokemons(
             R.drawable.butterfree012,
             "Buterfree",
@@ -63,22 +62,19 @@ class PokemonDataFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        pokemonview = inflater.inflate(R.layout.fragment_pokemon_data, container, false)
-        return pokemonview
+        binding = FragmentPokemonDataBinding.inflate(inflater,container,false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = pokemonview.findViewById(R.id.rv_listaPokemons)
-
-
-        recyclerView.apply {
-            setHasFixedSize(true)
-            recyclerView.layoutManager = GridLayoutManager(context, 2)
-
-            adapter = PokemonAdapter(listaPokemons)
-            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        val pokemonAdapter = PokemonAdapter(listaPokemons = listaPokemons)
+        binding?.let {
+            with(it){
+                rvListaPokemons.layoutManager = LinearLayoutManager(context)
+                rvListaPokemons.adapter = pokemonAdapter
+            }
         }
     }
 

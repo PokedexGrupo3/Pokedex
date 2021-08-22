@@ -31,12 +31,13 @@ class MenuDexFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         binding?.imgPokedex?.setOnClickListener(){
             findNavController().navigate(R.id.action_fragmentMenuDex_to_pokemonDataFragment)
         }
 
+        binding?.imgDex2?.setOnClickListener(){
+            findNavController().navigate(R.id.action_fragmentMenuDex_to_configuracoesFragment)
+        }
     }
 
     override fun onDestroyView() {
