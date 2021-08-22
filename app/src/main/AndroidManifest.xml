@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".Main.MainActivity"
             android:label="Pokedex"
             android:exported="true">
         <intent-filter>

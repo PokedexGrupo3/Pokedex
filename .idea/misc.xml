@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml" value="0.203125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.23177083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.32563405797101447" />
-        <entry key="app/src/main/res/layout/fragment_configuracoes.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/fragment_configuracoes.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_main_view.xml" value="0.18819655521783182" />
         <entry key="app/src/main/res/layout/fragment_menu_dex.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_pokemon_data.xml" value="0.2717219589257504" />

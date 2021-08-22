@@ -1,28 +1,26 @@
-package com.example.pokedex
+package com.example.pokedex.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokedex.databinding.FragmentPokemondataRecyclerviewBinding
-import com.example.pokedexmock.adapter.Pokemons
+import com.example.pokedex.DataClasses.Pokemon
 
-class PokemonAdapter (private val listaPokemons: List<Pokemons>): RecyclerView.Adapter<PokemonAdapter.ViewHolder>(){
+class PokemonDataAdapter (private val listaPokemons: List<Pokemon>): RecyclerView.Adapter<PokemonDataAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = FragmentPokemondataRecyclerviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: PokemonAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(listaPokemons[position])
     }
 
     override fun getItemCount(): Int = listaPokemons.size
 
     class ViewHolder(val binding:FragmentPokemondataRecyclerviewBinding):RecyclerView.ViewHolder(binding.root){
-        fun bind(pokemon: Pokemons){
+        fun bind(pokemon: Pokemon){
             binding.imgCall.setImageResource(pokemon.image)
             binding.txtPokemonName.text = pokemon.name
             binding.txtPokemonNumber.text = pokemon.number

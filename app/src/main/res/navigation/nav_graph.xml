@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentMenuDex"
-        android:name="com.example.pokedex.MenuDexFragment"
+        android:name="com.example.pokedex.Fragments.MenuDexFragment"
         android:label="fragment_menu_dex"
         tools:layout="@layout/fragment_menu_dex" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/pokemonDataFragment"
-        android:name="com.example.pokedex.PokemonDataFragment"
+        android:name="com.example.pokedex.Fragments.PokemonDataFragment"
         android:label="fragment_pokemon_data"
         tools:layout="@layout/fragment_pokemon_data" >
         <action
@@ -28,16 +28,23 @@
     </fragment>
     <fragment
         android:id="@+id/configuracoesFragment"
-        android:name="com.example.pokedex.ConfiguracoesFragment"
+        android:name="com.example.pokedex.Fragments.ConfiguracoesFragment"
         android:label="fragment_configuracoes"
         tools:layout="@layout/fragment_configuracoes" >
         <action
             android:id="@+id/action_configuracoesFragment_to_saidaFragment"
             app:destination="@id/saidaFragment" />
+        <action
+            android:id="@+id/action_configuracoesFragment_to_fragmentMenuDex"
+            app:destination="@id/fragmentMenuDex" />
     </fragment>
     <fragment
         android:id="@+id/saidaFragment"
-        android:name="com.example.pokedex.SaidaFragment"
+        android:name="com.example.pokedex.Fragments.SaidaFragment"
         android:label="fragment_saida"
-        tools:layout="@layout/fragment_saida" />
+        tools:layout="@layout/fragment_saida" >
+        <action
+            android:id="@+id/action_saidaFragment_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
+    </fragment>
 </navigation>
