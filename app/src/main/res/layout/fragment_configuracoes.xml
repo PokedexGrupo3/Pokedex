@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ConfiguracoesFragment">
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivPokebola"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/ic_poke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/viewContainer"
+        style="@style/Container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPokebola"
+
+        />
+
+    <TextView
+        android:id="@+id/tvConfig"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/configura_es"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/ivPokebola"
+        app:layout_constraintStart_toStartOf="@id/viewContainer"
+        app:layout_constraintTop_toTopOf="@id/viewContainer" />
+
+    <TextView
+        android:id="@+id/tvSair"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="@string/sair"
+        android:textAlignment="viewEnd"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvConfig"
+        app:layout_constraintEnd_toEndOf="@id/viewContainer"
+        app:layout_constraintStart_toEndOf="@id/tvConfig"
+        app:layout_constraintTop_toTopOf="@id/tvConfig"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvModo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/modo_noturno"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvConfig"
+        app:layout_constraintStart_toStartOf="@id/tvConfig"
+        app:layout_constraintTop_toBottomOf="@id/tvConfig" />
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="@id/viewContainer"
+        app:layout_constraintStart_toEndOf="@id/tvModo"
+        app:layout_constraintTop_toBottomOf="@id/tvSair"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/telefone"
+        app:layout_constraintStart_toStartOf="@id/tvModo"
+        app:layout_constraintTop_toBottomOf="@id/tvModo" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="@id/Switch"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone"
+        />
+
+    <Button
+        android:id="@+id/btAltPhone"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="@string/alterar_telefone"
+        android:textSize="8sp"
+        android:background="@drawable/button"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etPhone"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        />
+
+    <TextView
+        android:id="@+id/tvApelido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/apelido"
+        app:layout_constraintStart_toStartOf="@id/tvModo"
+        app:layout_constraintTop_toBottomOf="@id/btAltPhone" />
+
+
+    <EditText
+        android:id="@+id/etApelido"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="@id/Switch"
+        app:layout_constraintTop_toBottomOf="@id/tvApelido"
+        />
+
+    <Button
+        android:id="@+id/btAltApelido"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="@string/alterar_apelido"
+        android:textSize="8sp"
+        android:background="@drawable/button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etPhone"
+        app:layout_constraintTop_toBottomOf="@id/etApelido"
+        />
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/e_mail"
+        app:layout_constraintStart_toStartOf="@id/tvModo"
+        app:layout_constraintTop_toBottomOf="@id/btAltApelido" />
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="@id/Switch"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        />
+
+    <Button
+        android:id="@+id/btAltEmail"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="@string/alterar_e_mail"
+        android:textSize="8sp"
+        android:background="@drawable/button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etPhone"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        />
+
+
+    <TextView
+        android:id="@+id/tvSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/senha"
+        app:layout_constraintStart_toStartOf="@id/tvModo"
+        app:layout_constraintTop_toBottomOf="@id/btAltEmail" />
+
+
+    <EditText
+        android:id="@+id/etSenha"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="@id/Switch"
+        app:layout_constraintTop_toBottomOf="@id/tvSenha"
+        />
+
+    <TextView
+        android:id="@+id/tvConfSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/confirmar_senha"
+        app:layout_constraintStart_toStartOf="@id/tvModo"
+        app:layout_constraintTop_toBottomOf="@id/etSenha" />
+
+
+    <EditText
+        android:id="@+id/etConfSenha"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="@id/Switch"
+        app:layout_constraintTop_toBottomOf="@id/tvConfSenha"
+        />
+
+
+    <Button
+        android:id="@+id/btAltSenha"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="@string/alterar_senha"
+        android:textSize="8sp"
+        android:background="@drawable/button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etPhone"
+        app:layout_constraintTop_toBottomOf="@id/etConfSenha"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

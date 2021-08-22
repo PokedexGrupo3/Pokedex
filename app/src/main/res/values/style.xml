@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="red_pink">#EF4D4D</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    
     <style name="pokemonNumber">
         <item name="android:fontFamily">Lato</item>
         <item name="android:textColor">#FF47525E</item>

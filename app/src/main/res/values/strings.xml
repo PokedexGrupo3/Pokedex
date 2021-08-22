@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Pokedex</string>
-    <string name="app_name2">PokedexMock</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nome_pokemon">Butterfree</string>
@@ -9,4 +8,18 @@
     <string name="chipRegiao">Região</string>
     <string name="chipTipo">Tipo</string>
     <string name="til_busca">Digite aqui</string>
+    <string name="telefone">Telefone</string>
+    <string name="configura_es">Configurações</string>
+    <string name="sair">Sair</string>
+    <string name="modo_noturno">Modo Noturno</string>
+    <string name="alterar_telefone">Alterar Telefone</string>
+    <string name="apelido">Apelido</string>
+    <string name="alterar_apelido">Alterar Apelido</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="alterar_e_mail">Alterar E-Mail</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="alterar_senha">Alterar Senha</string>
+    <string name="deseja_realmente_sair">Deseja realmente sair?</string>
+    <string name="n_o_sair">Não Sair</string>
 </resources>
