@@ -10,13 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
+            android:name=".CadastroActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActiviy"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:label="Pokedex"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:exported="true"
+            android:label="Pokedex">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
+
 </manifest>

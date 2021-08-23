@@ -9,4 +9,5 @@
     <string name="chipRegiao">Região</string>
     <string name="chipTipo">Tipo</string>
     <string name="til_busca">Digite aqui</string>
+    <string name="esquecer"><u>Esqueceu a senha?</u> </string>
 </resources>

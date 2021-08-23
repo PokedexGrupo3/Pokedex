@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/activity_cadastro.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/activity_login_activiy.xml" value="0.22" />
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/fragment_menu_dex.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/fragment_pokemon_data.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/filipe.santos/Desktop/Pokedex/app/src/main/res/layout/fragment_pokemondata_recyclerview.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24635416666666668" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.23177083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.32563405797101447" />
@@ -13,7 +20,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
