@@ -10,16 +10,24 @@
     tools:context=".Fragments.PokemonDataFragment">
 
 
-    <androidx.cardview.widget.CardView
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
         android:id="@+id/menuVermelho"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:backgroundTint="@color/red"
+        android:background="#A12424"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -63,4 +71,6 @@
             tools:listitem="@layout/fragment_pokemondata_recyclerview" />
 
     </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

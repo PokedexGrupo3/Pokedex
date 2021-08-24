@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.pokedex.R
+import com.example.pokedex.databinding.FragmentCadastroBinding
 import com.example.pokedex.databinding.FragmentSaidaBinding
 
-class SaidaFragment : Fragment() {
+class CadastroFragment : Fragment() {
 
-    private var binding:FragmentSaidaBinding? = null
+    private var binding: FragmentCadastroBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,23 +23,15 @@ class SaidaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSaidaBinding.inflate(inflater, container, false)
+        binding = FragmentCadastroBinding.inflate(inflater, container, false)
         return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.ivBack?.setOnClickListener(){
-            findNavController().navigate(R.id.action_saidaFragment_to_configuracoesFragment)
-        }
-
-        binding?.tvNaoSair?.setOnClickListener(){
-            findNavController().navigate(R.id.action_saidaFragment_to_configuracoesFragment)
-        }
-
-        binding?.btSair2?.setOnClickListener(){
-            findNavController().navigate(R.id.action_saidaFragment_to_loginFragment)
+        binding?.btnEntrar?.setOnClickListener(){
+            findNavController().navigate(R.id.action_cadastroFragment_to_fragmentMenuDex)
         }
     }
 

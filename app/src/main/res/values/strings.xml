@@ -22,4 +22,5 @@
     <string name="alterar_senha">Alterar Senha</string>
     <string name="deseja_realmente_sair">Deseja realmente sair?</string>
     <string name="n_o_sair">Não Sair</string>
+    <string name="esquecer"><u>Esqueceu a senha?</u> </string>
 </resources>

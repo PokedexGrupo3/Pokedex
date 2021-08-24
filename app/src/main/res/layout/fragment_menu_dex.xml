@@ -83,4 +83,5 @@
         app:layout_constraintTop_toBottomOf="@id/imgDex7"
         android:src="@drawable/pokedex_pokedexedit"/>
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
