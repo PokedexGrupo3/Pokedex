@@ -4,17 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5154"
+    android:background="#933B3C"
     tools:context=".Fragments.MenuDexFragment">
 
+
+
+
+
+    <ImageView
+        android:id="@+id/imgPokebola"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/imgPokedex"
+        app:srcCompat="@drawable/poke" />
+
+
+    <TextView
+        android:id="@+id/tvNomeUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomeusuario"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/imgPokedex"
+        app:layout_constraintTop_toBottomOf="@id/imgPokebola"
+        android:layout_marginTop="20dp"/>
 
     <ImageView
         android:id="@+id/imgPokedex"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNomeUsuario"
         android:src="@drawable/pokedex_pokedexedit"
         android:contentDescription="Pokedex"/>
 
@@ -22,10 +53,12 @@
         android:id="@+id/imgDex2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imgPokedex"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgPokedex"
         android:src="@drawable/pokedex_pokedexedit"/>
 
     <ImageView

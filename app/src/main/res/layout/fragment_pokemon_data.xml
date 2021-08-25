@@ -9,22 +9,11 @@
     android:orientation="vertical"
     tools:context=".Fragments.PokemonDataFragment">
 
-
-    <ImageView
-        android:id="@+id/ivBack"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:padding="10dp"
-        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <FrameLayout
         android:id="@+id/menuVermelho"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="#A12424"
+        android:background="#FF5154"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></FrameLayout>
@@ -61,15 +50,14 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_listaPokemons"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:listitem="@layout/fragment_pokemondata_recyclerview" />
-
     </ScrollView>
 
 
