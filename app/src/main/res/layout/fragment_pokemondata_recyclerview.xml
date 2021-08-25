@@ -32,7 +32,7 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtPokemonNumber"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:textColor="@color/black"
@@ -41,7 +41,7 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtPokemonName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/nome_pokemon" />
