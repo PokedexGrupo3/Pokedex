@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokedex.Adapters.PokemonDataAdapter
 import com.example.pokedex.databinding.FragmentPokemonDataBinding
@@ -66,6 +67,15 @@ class PokemonDataFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        binding?.ivGear?.setOnClickListener(){
+            findNavController().navigate(R.id.action_pokemonDataFragment_to_configuracoesFragment)
+        }
+
+        binding?.ivBack?.setOnClickListener(){
+            findNavController().navigate(R.id.action_pokemonDataFragment_to_fragmentMenuDex)
+        }
 
         val pokemonAdapter = PokemonDataAdapter(listaPokemons = listaPokemons)
         binding?.let {

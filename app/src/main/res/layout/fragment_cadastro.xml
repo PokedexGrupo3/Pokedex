@@ -198,7 +198,7 @@
         android:layout_width="246dp"
         android:layout_height="50dp"
         android:backgroundTint="#FF5154"
-        android:text="REGISTRAR"
+        android:text="@string/registrar"
         android:background="@drawable/roundshapebtn"
         app:layout_constraintBottom_toBottomOf="@id/flFundoBranco"
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"

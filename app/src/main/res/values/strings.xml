@@ -10,7 +10,7 @@
     <string name="til_busca">Digite aqui</string>
     <string name="telefone">Telefone</string>
     <string name="configura_es">Configurações</string>
-    <string name="sair">Sair</string>
+    <string name="sair"><u>Sair</u></string>
     <string name="modo_noturno">Modo Noturno</string>
     <string name="alterar_telefone">Alterar Telefone</string>
     <string name="apelido">Apelido</string>
@@ -21,7 +21,7 @@
     <string name="confirmar_senha">Confirmar Senha</string>
     <string name="alterar_senha">Alterar Senha</string>
     <string name="deseja_realmente_sair">Deseja realmente sair?</string>
-    <string name="n_o_sair">Não Sair</string>
+    <string name="n_o_sair"><u>Não Sair</u></string>
     <string name="esquecer"><u>Esqueceu a senha?</u> </string>
     <string name="cadastrar"><u>Cadastrar</u></string>
     <string name="login">Login</string>
@@ -36,4 +36,5 @@
     <string name="login_cadastro"><u>Login</u></string>
     <string name="nome_completo">Nome Completo</string>
     <string name="nomeusuario">NomeUsuario</string>
+    <string name="registrar">REGISTRAR</string>
 </resources>

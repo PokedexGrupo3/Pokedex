@@ -34,7 +34,7 @@ class ConfiguracoesFragment : Fragment() {
             findNavController().navigate(R.id.action_configuracoesFragment_to_fragmentMenuDex)
         }
 
-        binding?.tvSair?.setOnClickListener(){
+        binding?.btSair?.setOnClickListener(){
             findNavController().navigate(R.id.action_configuracoesFragment_to_saidaFragment)
         }
 

@@ -17,17 +17,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/ivBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@id/menuVermelho"
+        app:layout_constraintTop_toTopOf="@id/ivGear"
+        app:layout_constraintBottom_toBottomOf="@id/ivGear"
+        android:src="@drawable/back"/>
+
+    <ImageView
+        android:id="@+id/ivGear"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/menuVermelho"
+        app:layout_constraintTop_toTopOf="@id/menuVermelho"
+        android:src="@drawable/gear"/>
 
 
     <TextView
@@ -36,8 +46,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/menuVermelho"
         app:layout_constraintStart_toStartOf="@id/menuVermelho"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/nomeusuario"
         android:textAllCaps="true"
         android:textSize="15sp"
@@ -46,25 +56,25 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/imgUsuario"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
         app:cardCornerRadius="250dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menuVermelho"
         app:layout_constraintBottom_toTopOf="@id/tfNomePokemon"
-        android:layout_marginBottom="35dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="70dp">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             app:cardCornerRadius="250dp"
             android:layout_gravity="center">
 
             <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:src="@drawable/pokedex_pokedexedit"
                 android:scaleType="centerCrop"/>
         </androidx.cardview.widget.CardView>
@@ -78,11 +88,11 @@
         app:layout_constraintTop_toBottomOf="@id/menuVermelho"
         app:layout_constraintStart_toStartOf="@id/menuVermelho"
         android:hint="@string/nome_pokemon"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:layout_margin="20dp">
+        android:layout_marginTop="70dp">
 
     <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
@@ -91,6 +101,8 @@
         android:background="#DDDDDD"
         android:hint="@string/nome_pokemon"
         android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 

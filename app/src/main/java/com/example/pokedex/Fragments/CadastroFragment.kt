@@ -33,6 +33,10 @@ class CadastroFragment : Fragment() {
         binding?.btnEntrar?.setOnClickListener(){
             findNavController().navigate(R.id.action_cadastroFragment_to_fragmentMenuDex)
         }
+
+        binding?.btnVoltarLogin?.setOnClickListener(){
+            findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
+        }
     }
 
     override fun onDestroyView() {

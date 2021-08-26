@@ -29,15 +29,12 @@ class SaidaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.ivBack?.setOnClickListener(){
-            findNavController().navigate(R.id.action_saidaFragment_to_configuracoesFragment)
-        }
 
         binding?.tvNaoSair?.setOnClickListener(){
             findNavController().navigate(R.id.action_saidaFragment_to_configuracoesFragment)
         }
 
-        binding?.btSair2?.setOnClickListener(){
+        binding?.btnSair?.setOnClickListener(){
             findNavController().navigate(R.id.action_saidaFragment_to_loginFragment)
         }
     }
