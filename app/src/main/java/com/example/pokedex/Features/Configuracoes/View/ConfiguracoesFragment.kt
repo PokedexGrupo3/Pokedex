@@ -1,4 +1,4 @@
-package com.example.pokedex.Fragments
+package com.example.pokedex.Features.Configuracoes.View
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.pokedex.R
-import com.example.pokedex.databinding.FragmentCadastroBinding
-import com.example.pokedex.databinding.FragmentSaidaBinding
+import com.example.pokedex.databinding.FragmentConfiguracoesBinding
 
-class CadastroFragment : Fragment() {
+class ConfiguracoesFragment : Fragment() {
 
-    private var binding: FragmentCadastroBinding? = null
+    private var binding:FragmentConfiguracoesBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,20 +22,21 @@ class CadastroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCadastroBinding.inflate(inflater, container, false)
+        binding  = FragmentConfiguracoesBinding.inflate(inflater,container,false)
         return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.btnEntrar?.setOnClickListener(){
-            findNavController().navigate(R.id.action_cadastroFragment_to_fragmentMenuDex)
+        binding?.ivBack?.setOnClickListener(){
+            findNavController().navigate(R.id.action_configuracoesFragment_to_fragmentMenuDex)
         }
 
-        binding?.btnVoltarLogin?.setOnClickListener(){
-            findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
+        binding?.btSair?.setOnClickListener(){
+            findNavController().navigate(R.id.action_configuracoesFragment_to_saidaFragment)
         }
+
     }
 
     override fun onDestroyView() {

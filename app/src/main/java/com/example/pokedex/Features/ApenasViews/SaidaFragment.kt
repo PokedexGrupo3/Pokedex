@@ -1,4 +1,4 @@
-package com.example.pokedex.Fragments
+package com.example.pokedex.Features.ApenasViews
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

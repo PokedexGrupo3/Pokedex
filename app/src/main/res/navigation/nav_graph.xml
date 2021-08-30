@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentMenuDex"
-        android:name="com.example.pokedex.Fragments.MenuDexFragment"
+        android:name="com.example.pokedex.Features.ApenasViews.MenuDexFragment"
         android:label="fragment_menu_dex"
         tools:layout="@layout/fragment_menu_dex" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/pokemonDataFragment"
-        android:name="com.example.pokedex.Fragments.PokemonDataFragment"
+        android:name="com.example.pokedex.Features.PokemonData.View.PokemonDataFragment"
         android:label="fragment_pokemon_data"
         tools:layout="@layout/fragment_pokemon_data" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/configuracoesFragment"
-        android:name="com.example.pokedex.Fragments.ConfiguracoesFragment"
+        android:name="com.example.pokedex.Features.Configuracoes.View.ConfiguracoesFragment"
         android:label="fragment_configuracoes"
         tools:layout="@layout/fragment_configuracoes" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/saidaFragment"
-        android:name="com.example.pokedex.Fragments.SaidaFragment"
+        android:name="com.example.pokedex.Features.ApenasViews.SaidaFragment"
         android:label="fragment_saida"
         tools:layout="@layout/fragment_saida" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/cadastroFragment"
-        android:name="com.example.pokedex.Fragments.CadastroFragment"
+        android:name="com.example.pokedex.Features.Cadastro.View.CadastroFragment"
         android:label="CadastroFragment" >
         <action
             android:id="@+id/action_cadastroFragment_to_loginFragment"
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.pokedex.Fragments.LoginFragment"
+        android:name="com.example.pokedex.Features.Login.View.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_cadastroFragment"

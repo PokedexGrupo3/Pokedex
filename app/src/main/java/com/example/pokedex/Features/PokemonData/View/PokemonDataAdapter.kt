@@ -1,10 +1,10 @@
-package com.example.pokedex.Adapters
+package com.example.pokedex.Features.PokemonData.View
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokedex.databinding.FragmentPokemondataRecyclerviewBinding
-import com.example.pokedex.DataClasses.Pokemon
+import com.example.pokedex.Repository.PokemonData.Pokemon
 
 class PokemonDataAdapter (private val listaPokemons: List<Pokemon>): RecyclerView.Adapter<PokemonDataAdapter.ViewHolder>(){
 

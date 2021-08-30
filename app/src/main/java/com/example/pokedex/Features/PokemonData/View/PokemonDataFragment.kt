@@ -1,4 +1,4 @@
-package com.example.pokedex.Fragments
+package com.example.pokedex.Features.PokemonData.View
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pokedex.Adapters.PokemonDataAdapter
 import com.example.pokedex.databinding.FragmentPokemonDataBinding
-import com.example.pokedex.DataClasses.Pokemon
+import com.example.pokedex.Repository.PokemonData.Pokemon
 import com.example.pokedex.R
 
 class PokemonDataFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.pokedex.Fragments
+package com.example.pokedex.Features.ApenasViews
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.pokedex.R
-import com.example.pokedex.databinding.FragmentConfiguracoesBinding
 import com.example.pokedex.databinding.FragmentMenuDexBinding
 
-class ConfiguracoesFragment : Fragment() {
 
-    private var binding:FragmentConfiguracoesBinding? = null
+class MenuDexFragment : Fragment() {
+
+    private var binding:FragmentMenuDexBinding? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,21 +24,23 @@ class ConfiguracoesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding  = FragmentConfiguracoesBinding.inflate(inflater,container,false)
+        binding = FragmentMenuDexBinding.inflate(inflater,container,false)
         return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.ivBack?.setOnClickListener(){
-            findNavController().navigate(R.id.action_configuracoesFragment_to_fragmentMenuDex)
+        binding?.imgPokedex?.setOnClickListener(){
+            findNavController().navigate(R.id.action_fragmentMenuDex_to_pokemonDataFragment)
         }
 
-        binding?.btSair?.setOnClickListener(){
-            findNavController().navigate(R.id.action_configuracoesFragment_to_saidaFragment)
+        binding?.imgDex2?.setOnClickListener(){
+            findNavController().navigate(R.id.action_fragmentMenuDex_to_configuracoesFragment)
         }
 
+        binding?.imgDex3?.setOnClickListener(){
+        }
     }
 
     override fun onDestroyView() {
