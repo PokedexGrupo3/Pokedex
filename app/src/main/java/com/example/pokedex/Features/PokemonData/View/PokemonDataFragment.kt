@@ -1,12 +1,15 @@
 package com.example.pokedex.Features.PokemonData.View
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pokedex.APIConnection.APIConnection
+import com.example.pokedex.Features.PokemonData.Repository.PokemonDataRepository
 import com.example.pokedex.databinding.FragmentPokemonDataBinding
 import com.example.pokedex.Repository.PokemonData.Pokemon
 import com.example.pokedex.R
@@ -76,12 +79,21 @@ class PokemonDataFragment : Fragment() {
             findNavController().navigate(R.id.action_pokemonDataFragment_to_fragmentMenuDex)
         }
 
+
+
         val pokemonAdapter = PokemonDataAdapter(listaPokemons = listaPokemons)
         binding?.let {
             with(it){
                 rvListaPokemons.layoutManager = LinearLayoutManager(context)
                 rvListaPokemons.adapter = pokemonAdapter
             }
+        }
+    }
+
+    suspend fun getPokemonTest(){
+        var pokemonDataRepository = PokemonDataRepository()
+        pokemonDataRepository.safeApiCall {
+            APIConnection.pokemonApi.getPokemonList()
         }
     }
 
