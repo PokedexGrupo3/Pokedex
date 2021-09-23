@@ -1,58 +1,22 @@
 package com.example.pokedex.Features.PokemonData.View
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pokedex.APIConnection.APIConnection
-import com.example.pokedex.Features.PokemonData.Repository.PokemonDataRepository
+import com.example.pokedex.Features.PokemonData.ViewModel.PokemonDataViewModel
 import com.example.pokedex.databinding.FragmentPokemonDataBinding
-import com.example.pokedex.Repository.PokemonData.Pokemon
 import com.example.pokedex.R
 
 class PokemonDataFragment : Fragment() {
 
-    private var binding:FragmentPokemonDataBinding? = null
+    private var binding: FragmentPokemonDataBinding? = null
+    private lateinit var viewModel: PokemonDataViewModel
 
-    var listaPokemons = listOf(
-        Pokemon(
-            R.drawable.butterfree012,
-            "Buterfree",
-            "012"
-        ),
-        Pokemon(
-            R.drawable.chansey113,
-            "Chansey",
-            "113"
-        ),
-        Pokemon(
-            R.drawable.charmander004,
-            "Charmander",
-            "004"
-        ),
-        Pokemon(
-            R.drawable.cubone104,
-            "Cubone",
-            "104"
-        ),
-        Pokemon(
-            R.drawable.gengar094,
-            "Gengar",
-            "094"
-        ), Pokemon(
-            R.drawable.jigglypuff039,
-            "jigglypuff",
-            "039"
-        ), Pokemon(
-            R.drawable.kadabra064,
-            "Kadabra",
-            "064"
-        )
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,7 +27,7 @@ class PokemonDataFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentPokemonDataBinding.inflate(inflater,container,false)
+        binding = FragmentPokemonDataBinding.inflate(inflater, container, false)
         return binding?.root
     }
 
@@ -71,34 +35,54 @@ class PokemonDataFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding?.ivGear?.setOnClickListener(){
+        binding?.ivGear?.setOnClickListener() {
             findNavController().navigate(R.id.action_pokemonDataFragment_to_configuracoesFragment)
         }
 
-        binding?.ivBack?.setOnClickListener(){
+        binding?.ivBack?.setOnClickListener() {
             findNavController().navigate(R.id.action_pokemonDataFragment_to_fragmentMenuDex)
         }
 
 
 
-        val pokemonAdapter = PokemonDataAdapter(listaPokemons = listaPokemons)
-        binding?.let {
-            with(it){
-                rvListaPokemons.layoutManager = LinearLayoutManager(context)
-                rvListaPokemons.adapter = pokemonAdapter
-            }
+        activity?.let {
+            viewModel = ViewModelProvider(it)[PokemonDataViewModel::class.java]
+
+            viewModel.getListaPokemon()
         }
+
+        setupObservables()
+
     }
 
-    suspend fun getPokemonTest(){
-        var pokemonDataRepository = PokemonDataRepository()
-        pokemonDataRepository.safeApiCall {
-            APIConnection.pokemonApi.getPokemonList()
+    private fun setupObservables() {
+        activity?.let {
+            viewModel.onSuccessPokeLista.observe(viewLifecycleOwner, {
+                it?.let {
+                val pokemonDataAdapter = PokemonDataAdapter(
+                    listaPokemons = it
+                )
+                    binding?.let {
+                        with(it){
+                            rvListaPokemons.apply {
+                                layoutManager = LinearLayoutManager(this.context)
+                                adapter = pokemonDataAdapter
+                            }
+                        }
+                    }
+                }
+
+            })
         }
+
+        viewModel.onErrorPokeLista.observe(viewLifecycleOwner, {
+            it
+        })
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
+
 }
