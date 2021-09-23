@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.MainActivity"
+    android:background="@color/flying_blue">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        tools:context=".detail.DetailActivity"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/menuGrid"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/menuDetalhado"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/Pink"
+            android:backgroundTint="@color/Pink">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/ol_xpto"
+                android:textColor="#FFECB3"
+                android:textSize="11sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nickname"
+                android:layout_marginTop="62dp"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/white">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cod_123456789"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="75dp"
+                android:textSize="12sp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="350dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/Pink"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_settings_24"
+                tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck">
+
+            </ImageButton>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/raster"
+                android:scaleType="centerInside"
+                android:backgroundTint="@color/Pink"
+                android:contentDescription="@string/todo">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_app"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textSize="30sp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todo">
+
+            </ImageView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menuDetalhado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/menuGrid"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/geodude"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/bulbassaur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/geodude_074"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/app_name">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/button_trade"
+                android:text="@string/_073_tentacruel"
+                android:textColor="#212121"
+                android:textSize="11sp"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/button_trade"
+                android:text="@string/_075_graveler"
+                android:textColor="#212121"
+                android:textSize="11sp"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck">
+
+            </Button>
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/evolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/menuDetalhado"
+            tools:layout_editor_absoluteX="0dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:id="@+id/evolutionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/Evoluções"
+                android:textColor="@color/black">
+
+            </TextView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/geodude"
+                    android:textAlignment="center"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/bulbassaurev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/geodude_074"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/Bulbasaur" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@string/graveler"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/ivysaurev"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:src="@drawable/graveler_075"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/golem"
+                    android:textAlignment="center"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/venosaurev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/golem"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/golem_076"
+                    tools:ignore="ImageContrastCheck" />
+
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/card"
+            app:layout_constraintTop_toBottomOf="@+id/evolution"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Ability"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Gender"
+                    android:textStyle="bold"
+                    android:layout_marginTop="42dp"
+                    android:textColor="@color/black">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Classification"
+                    android:textStyle="bold"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="42dp"
+                    android:text="@string/GenderM"
+                    android:textColor="#00838F">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="42dp"
+                    android:text="@string/GenderF"
+                    android:layout_gravity="end"
+                    android:textColor="#D81B60">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rock"
+                    android:layout_marginStart="100dp"
+                    android:textColor="@color/black">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Overgrow"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:textColor="@color/black"
+                    android:textSize="11sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/via_trade"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:layout_gravity="center">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/evolution"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:context=".detail.DetailActivity"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type"
+                android:textColor="@color/black">
+            </TextView>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/typeGrass"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/Rock"
+                    android:text="@string/rock"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    tools:ignore="SpUsage"
+                    app:cardCornerRadius="19dp"
+                    app:cardElevation="6dp"/>
+
+                <Button
+                    android:id="@+id/typePoison"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/Ground"
+                    android:text="@string/ground"
+                    android:textSize="10dp"
+                    tools:ignore="SpUsage">
+
+                </Button>
+
+            </GridLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardweakness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/card"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weakness"
+                android:textColor="@color/black">
+            </TextView>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="4">
+
+                <Button
+                    android:id="@+id/Type_Fire"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/orange_fire"
+                    android:text="@string/fire"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    tools:ignore="SpUsage,TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/Type_Flying"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/flying_blue"
+                    android:text="@string/flying"
+                    android:textColor="#5D4037"
+                    android:textSize="10dp"
+                    tools:ignore="SpUsage" />
+
+                <Button
+                    android:id="@+id/Type_Psychic"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/pink_psychic"
+                    android:text="@string/psychic"
+                    android:textSize="10dp"
+                    tools:ignore="SpUsage,TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/Type_Ice"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:text="@string/ice"
+                    android:textColor="#5E35B1"
+                    android:textSize="10dp"
+                    tools:ignore="SpUsage" />
+
+
+            </GridLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tbDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:tabTextColor="@color/black"
+            android:backgroundTint="@color/Pink">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level"
+                tools:ignore="UnusedAttribute">
+            </com.google.android.material.tabs.TabItem>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbTM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tm_hm">
+            </com.google.android.material.tabs.TabItem>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbEgg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/egg">
+            </com.google.android.material.tabs.TabItem>
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vwDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/flying_blue"
+            android:backgroundTint="@color/flying_blue">
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>
