@@ -4,6 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/55119/AndroidStudioProjects/Pokedex-development/app/src/main/res/layout/fragment_pokemondata_recyclerview.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_configuracoes.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_detail.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_item.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_item_recycler.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_level.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_login.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_menu_dex.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_pokemon_data.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_pokemondata_recyclerview.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/fragment_tm.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/item_egg.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/item_level.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Documents/GitHub/Pokedex/app/src/main/res/layout/item_tm.xml" value="0.36770833333333336" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24635416666666668" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml" value="0.203125" />

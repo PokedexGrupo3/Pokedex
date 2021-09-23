@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_fragmentMenuDex_to_configuracoesFragment"
             app:destination="@id/configuracoesFragment" />
+        <action
+            android:id="@+id/action_fragmentMenuDex_to_itemFragment"
+            app:destination="@id/itemFragment" />
     </fragment>
     <fragment
         android:id="@+id/pokemonDataFragment"
@@ -77,5 +80,17 @@
         <action
             android:id="@+id/action_loginFragment_to_fragmentMenuDex"
             app:destination="@id/fragmentMenuDex" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.example.pokedex.Features.Item.Fragments.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_itemFragment_to_fragmentMenuDex"
+            app:destination="@id/fragmentMenuDex" />
+        <action
+            android:id="@+id/action_itemFragment_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
     </fragment>
 </navigation>

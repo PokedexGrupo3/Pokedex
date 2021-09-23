@@ -1,51 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:layout_width="210dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="5dp">
+    android:layout_marginVertical="5dp"
+    android:backgroundTint="@color/white"
+    android:layout_margin="@dimen/small"
+    android:id="@+id/cvPokemon"
+    app:cardCornerRadius="19dp"
+    app:cardElevation="6dp">
 
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgCall"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
-        tools:src="@drawable/butterfree012"
-        tools:ignore="MissingClass" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingVertical="15dp"
-        android:paddingStart="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgCall"
-        app:layout_constraintTop_toTopOf="parent">
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgCall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            tools:src="@drawable/butterfree012"
+            tools:ignore="MissingClass" />
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
             android:id="@+id/txtPokemonNumber"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toEndOf="@id/imgCall"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:text="@string/numero_pokemon"
             />
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
             android:id="@+id/txtPokemonName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imgCall"
+            app:layout_constraintTop_toBottomOf="@id/txtPokemonNumber"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:text="@string/nome_pokemon" />
-    </LinearLayout>
+
+        <TextView
+            android:id="@+id/poke_type_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flying"
+            android:textStyle="italic"
+            android:textColor="@color/flying_blue"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@id/imgCall"
+            app:layout_constraintTop_toBottomOf="@id/txtPokemonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/small"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/poke_type_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bug"
+            android:textStyle="italic"
+            android:textColor="@color/Bug"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@id/poke_type_1"
+            app:layout_constraintTop_toBottomOf="@id/txtPokemonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginBottom="@dimen/small"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

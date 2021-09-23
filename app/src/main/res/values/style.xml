@@ -17,6 +17,11 @@
     <color name="orange_fire">#EF3510</color>
     <color name="Pink">#FF5154</color>
     <color name="RoyalBlue">#4169E1</color>
+    <color name="button_trade">#5887ff</color>
+    <color name="Rock">#D4B45C</color>
+    <color name="Ground">#BCA45C</color>
+    <color name="Bug">#81B622</color>
+
 
 
     <style name="pokemonNumber">
@@ -33,5 +38,7 @@
         <item name="android:lineSpacingMultiplier">1.3</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar"></style>
 
 </resources>

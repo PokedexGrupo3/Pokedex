@@ -31,15 +31,16 @@ class MenuDexFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.imgPokedex?.setOnClickListener(){
+        binding?.imgPokedex?.setOnClickListener{
             findNavController().navigate(R.id.action_fragmentMenuDex_to_pokemonDataFragment)
         }
 
-        binding?.imgDex2?.setOnClickListener(){
+        binding?.imgDex2?.setOnClickListener{
             findNavController().navigate(R.id.action_fragmentMenuDex_to_configuracoesFragment)
         }
 
-        binding?.imgDex3?.setOnClickListener(){
+        binding?.imgDex3?.setOnClickListener{
+            findNavController().navigate(R.id.action_fragmentMenuDex_to_itemFragment)
         }
     }
 
