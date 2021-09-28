@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pokedex.APIConnection.ResponseApi
 import com.example.pokedex.Features.PokemonData.Model.PokemonDataUseCase
-import com.example.pokedex.Repository.PokemonData.ListaPokemon
-import com.example.pokedex.Repository.PokemonData.Pokemons
 import com.example.pokedex.Repository.PokemonData.Result
 import kotlinx.coroutines.launch
 
@@ -16,9 +14,9 @@ class PokemonDataViewModel : ViewModel() {
 
     private val pokemonDataUseCase = PokemonDataUseCase()
 
-    private val _onSuccesPokeLista: MutableLiveData<List<Pokemons>> = MutableLiveData()
+    private val _onSuccesPokeLista: MutableLiveData<List<Result>> = MutableLiveData()
 
-    val onSuccessPokeLista: LiveData<List<Pokemons>>
+    val onSuccessPokeLista: LiveData<List<Result>>
         get() = _onSuccesPokeLista
 
     private val _onErrorPokeLista: MutableLiveData<String> = MutableLiveData()
@@ -30,9 +28,12 @@ class PokemonDataViewModel : ViewModel() {
         viewModelScope.launch {
             when (val responseApi = pokemonDataUseCase.getListaPokemon()) {
                 is ResponseApi.Success -> {
+                    val result = responseApi.data as List<*>
                     _onSuccesPokeLista.postValue(
-                        responseApi.data as List<Pokemons>
+                        result.filterIsInstance<Result>()
                     )
+
+
                 }
                 is ResponseApi.Error -> {
                     _onErrorPokeLista.postValue(responseApi.message)

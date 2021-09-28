@@ -62,6 +62,7 @@ class PokemonDataFragment : Fragment() {
                 val pokemonDataAdapter = PokemonDataAdapter(
                     listaPokemons = it
                 )
+
                     binding?.let {
                         with(it){
                             rvListaPokemons.apply {

@@ -1,6 +1,7 @@
 package com.example.pokedex.APIConnection
 
 import androidx.viewbinding.BuildConfig
+import com.example.pokedex.Repository.PokemonData.Result
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,6 +19,7 @@ object APIConnection {
                .addConverterFactory(GsonConverterFactory.create())
                .build()
     }
+
 
     private fun getInterceptorClient(): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor()
@@ -38,4 +40,6 @@ object APIConnection {
             }
         return interceptor.build()
     }
+
 }
+
