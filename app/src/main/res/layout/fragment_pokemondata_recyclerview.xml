@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <de.hdodenhof.circleimageview.CircleImageView
+
+        <ImageView
             android:id="@+id/imgCall"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -25,7 +26,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="20dp"
-            tools:src="@drawable/butterfree012"
             tools:ignore="MissingClass" />
 
         <TextView

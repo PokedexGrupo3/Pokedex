@@ -240,7 +240,7 @@
         app:layout_constraintTop_toBottomOf="@+id/HSV_chip">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_listaPokemons"
+            android:id="@+id/rvlistaPokemons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible"

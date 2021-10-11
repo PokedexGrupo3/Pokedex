@@ -59,7 +59,7 @@
                 android:layout_width="@dimen/normalSize"
                 android:layout_height="@dimen/normalSize"
                 android:src="@drawable/insignias"
-                android:contentDescription="Pokedex"/>
+                android:contentDescription="@string/pokedex"/>
 
             <TextView
                 android:layout_width="wrap_content"
