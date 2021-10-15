@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pokedex">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,9 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
+            android:name=".Main.LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".Main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Main.SplashScreen"
             android:exported="true"
-            android:label="Pokedex">
+            android:label="Pokedex"
+            android:theme="@style/AppTelaCheia">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

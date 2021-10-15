@@ -8,67 +8,54 @@
     tools:context=".Features.ApenasViews.MenuDexFragment">
 
 
-
     <ImageView
         android:id="@+id/imgPokebola"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvNomeUsuario"
-        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/poke" />
 
-
-    <TextView
-        android:id="@+id/tvNomeUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nomeUsuario"
-        android:textAllCaps="true"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgPokebola"
-        android:layout_marginTop="20dp"/>
-
-
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvNomeUsuario"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="10dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="19dp"
-        app:cardElevation="6dp">
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPokebola"
+        tools:layout_editor_absoluteX="10dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imgPokedex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/Pink"
-            android:layout_marginStart="20dp"
             app:cardCornerRadius="19dp"
-            app:cardElevation="6dp"
-            >
+            app:cardElevation="6dp">
+
             <ImageView
                 android:layout_width="@dimen/normalSize"
                 android:layout_height="@dimen/normalSize"
-                android:src="@drawable/insignias"
-                android:contentDescription="@string/pokedex"/>
+                android:contentDescription="Pokedex"
+                android:src="@drawable/pokemons" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pokemon"
-                android:layout_marginTop="150dp"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textStyle="italic"/>
+                android:layout_marginTop="150dp"
+                android:text="Pokemon"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
 
@@ -77,24 +64,25 @@
             android:id="@+id/imgDex2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
             android:layout_gravity="end"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/Pink"
             app:cardCornerRadius="19dp"
-            app:cardElevation="6dp"
-            >
+            app:cardElevation="6dp">
+
             <ImageView
                 android:layout_width="@dimen/normalSize"
                 android:layout_height="@dimen/normalSize"
-                android:src="@drawable/configuracao"/>
+                android:src="@drawable/configuracao" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/configuracao"
-                android:layout_marginTop="150dp"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textStyle="italic"/>
+                android:layout_marginTop="150dp"
+                android:text="@string/configuracao"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
 
@@ -108,8 +96,7 @@
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/Pink"
             app:cardCornerRadius="19dp"
-            app:cardElevation="6dp"
-            >
+            app:cardElevation="6dp">
 
             <ImageView
                 android:layout_width="@dimen/normalSize"
@@ -119,38 +106,38 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/item"
-                android:layout_marginTop="150dp"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textStyle="italic"/>
+                android:layout_marginTop="150dp"
+                android:text="@string/item"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/imgDex4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imgDex4"
             android:layout_marginStart="20dp"
             android:layout_marginTop="220dp"
             android:backgroundTint="@color/Pink"
             app:cardCornerRadius="19dp"
-            app:cardElevation="6dp"
-            >
+            app:cardElevation="6dp">
+
             <ImageView
                 android:layout_width="@dimen/normalSize"
                 android:layout_height="@dimen/normalSize"
-                android:src="@drawable/region"/>
+                android:src="@drawable/lugar" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/region"
-                android:layout_marginTop="150dp"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textStyle="italic"/>
+                android:layout_marginTop="150dp"
+                android:text="@string/region"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
 
@@ -159,26 +146,26 @@
             android:id="@+id/imgDex7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="420dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="420dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="@color/Pink"
             app:cardCornerRadius="19dp"
-            app:cardElevation="6dp"
-            >
+            app:cardElevation="6dp">
+
             <ImageView
                 android:layout_width="@dimen/normalSize"
                 android:layout_height="@dimen/normalSize"
-                android:src="@drawable/game"/>
+                android:src="@drawable/game" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/game"
-                android:layout_marginTop="150dp"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textStyle="italic"/>
+                android:layout_marginTop="150dp"
+                android:text="@string/game"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
 
@@ -188,26 +175,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginBottom="20dp"
             android:layout_marginTop="420dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="@color/Pink"
             app:cardCornerRadius="19dp"
-            app:cardElevation="6dp"
-            >
+            app:cardElevation="6dp">
+
             <ImageView
                 android:layout_width="@dimen/normalSize"
                 android:layout_height="@dimen/normalSize"
-                android:src="@drawable/encontros"/>
+                android:src="@drawable/encontros" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/encounters"
-                android:layout_marginTop="150dp"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textStyle="italic"/>
+                android:layout_marginTop="150dp"
+                android:text="@string/encounters"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
 
