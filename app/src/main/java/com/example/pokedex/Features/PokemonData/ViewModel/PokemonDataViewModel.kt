@@ -1,43 +1,42 @@
 package com.example.pokedex.Features.PokemonData.ViewModel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.pokedex.APIConnection.ResponseApi
-import com.example.pokedex.Features.PokemonData.Model.PokemonDataUseCase
-import com.example.pokedex.Repository.PokemonData.ListaPokemon
-import com.example.pokedex.Repository.PokemonData.Pokemons
-import com.example.pokedex.Repository.PokemonData.Result
-import kotlinx.coroutines.launch
+import com.example.pokedex.repository.api.PokemonService
+import com.example.pokedex.model.PokemonData.Pokemon
 
 
-class PokemonDataViewModel : ViewModel() {
+class PokemonViewModel : ViewModel() {
 
-    private val pokemonDataUseCase = PokemonDataUseCase()
 
-    private val _onSuccesPokeLista: MutableLiveData<List<Pokemons>> = MutableLiveData()
+    var pokemons = MutableLiveData<List<Pokemon?>>()
 
-    val onSuccessPokeLista: LiveData<List<Pokemons>>
-        get() = _onSuccesPokeLista
+    init {
+        Thread(Runnable {
+            loadPokemons()
+        }).start()
+    }
 
-    private val _onErrorPokeLista: MutableLiveData<String> = MutableLiveData()
+    private fun loadPokemons() {
+        val pokemonsApiResult = PokemonService.listPokemons()
 
-    val onErrorPokeLista: LiveData<String>
-        get() = _onErrorPokeLista
+        pokemonsApiResult?.results?.let {
+            pokemons.postValue(it.map { pokemonResult ->
+                val number = pokemonResult.url
+                    .replace("https://pokeapi.co/api/v2/pokemon/", "")
+                    .replace("/", "").toInt()
 
-    fun getListaPokemon() {
-        viewModelScope.launch {
-            when (val responseApi = pokemonDataUseCase.getListaPokemon()) {
-                is ResponseApi.Success -> {
-                    _onSuccesPokeLista.postValue(
-                        responseApi.data as List<Pokemons>
+                val pokemonApiResult = PokemonService.getPokemon(number)
+
+                pokemonApiResult?.let {
+                    Pokemon(
+                        pokemonApiResult.id,
+                        pokemonApiResult.name,
+
                     )
                 }
-                is ResponseApi.Error -> {
-                    _onErrorPokeLista.postValue(responseApi.message)
-                }
-            }
+            })
         }
     }
 }
+

@@ -6,16 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.pokedex.Main.MainActivity
 import com.example.pokedex.R
 import com.example.pokedex.databinding.FragmentLoginBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 class LoginFragment : Fragment() {
+
 
     private var binding:FragmentLoginBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -29,13 +33,17 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.btnEntrar?.setOnClickListener(){
-            findNavController().navigate(R.id.action_loginFragment_to_fragmentMenuDex)
-        }
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("AIzaSyACJkc1GxPcH-YX2vwABFWlhBudrvnkero")
+            .requestEmail()
+            .build()
 
-        binding?.btnCadastrar?.setOnClickListener(){
-            findNavController().navigate(R.id.action_loginFragment_to_cadastroFragment)
-        }
+        binding?.btnGoogle?.setOnClickListener {  }
+
+
+
+
+
     }
 
     override fun onDestroyView() {

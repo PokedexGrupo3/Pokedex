@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5154"
+    tools:context=".Main.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imgPokebola"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/flFundoBranco"
+        app:srcCompat="@drawable/poke" />
+
+    <FrameLayout
+        android:id="@+id/flFundoBranco"
+        android:layout_width="340dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPokebola"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#667383"
+        app:layout_constraintStart_toStartOf="@id/flFundoBranco"
+        app:layout_constraintTop_toTopOf="@id/flFundoBranco"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/btn_Cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar"
+        android:textSize="16sp"
+        android:textColor="#667383"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
+        app:layout_constraintBottom_toBottomOf="@id/tvLogin"
+        app:layout_constraintTop_toTopOf="@id/tvLogin"
+        android:layout_marginEnd="20dp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/e_mail"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/flFundoBranco"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp">
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundTint="#5E3030"
+            android:background="#DDDDDD"
+            android:hint="@string/e_mail"
+            android:padding="10dp"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        app:hintTextColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/flFundoBranco"
+        app:layout_constraintTop_toBottomOf="@id/tfEmail"
+        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
+        android:padding="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp">
+
+        <EditText
+            android:id="@+id/edt_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundTint="#5E3030"
+            android:background="#DDDDDD"
+            android:hint="@string/senha"
+            android:padding="10dp"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnEsqueceuSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/esquecer"
+        android:textColor="#667383"
+        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
+        app:layout_constraintBottom_toTopOf="@id/btn_entrar"
+        app:layout_constraintTop_toBottomOf="@id/tfSenha"
+        android:padding="10dp"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/btn_entrar"
+        android:layout_width="246dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#FF5154"
+        android:text="Entrar"
+        android:background="@drawable/roundshapebtn"
+        app:layout_constraintBottom_toBottomOf="@id/flFundoBranco"
+        app:layout_constraintStart_toStartOf="@id/flFundoBranco"
+        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
+        app:layout_constraintTop_toBottomOf="@id/btnEsqueceuSenha" />
+
+    <Button
+        android:id="@+id/btn_facebook"
+        android:layout_width="138dp"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/RoyalBlue"
+        android:text="Facebook"
+        android:background="@drawable/roundshapebtn"
+        app:layout_constraintTop_toBottomOf="@id/flFundoBranco"
+        app:layout_constraintStart_toStartOf="@id/flFundoBranco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="138dp"
+        android:layout_height="46dp"
+        android:textColorHint="#667383"
+        android:hint="@string/e_mail"
+        android:backgroundTint="@color/white"
+        android:text="Google"
+        android:layout_marginEnd="15dp"
+        android:textColor="#667383"
+        android:background="@drawable/roundshapebtn"
+        app:layout_constraintTop_toBottomOf="@id/flFundoBranco"
+        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

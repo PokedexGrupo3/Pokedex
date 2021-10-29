@@ -28,14 +28,6 @@ class CadastroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding?.btnEntrar?.setOnClickListener(){
-            findNavController().navigate(R.id.action_cadastroFragment_to_fragmentMenuDex)
-        }
-
-        binding?.btnVoltarLogin?.setOnClickListener(){
-            findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
-        }
     }
 
     override fun onDestroyView() {

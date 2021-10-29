@@ -34,9 +34,6 @@ class SaidaFragment : Fragment() {
             findNavController().navigate(R.id.action_saidaFragment_to_configuracoesFragment)
         }
 
-        binding?.btnSair?.setOnClickListener(){
-            findNavController().navigate(R.id.action_saidaFragment_to_loginFragment)
-        }
     }
 
     override fun onDestroyView() {

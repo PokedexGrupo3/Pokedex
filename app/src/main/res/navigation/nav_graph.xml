@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/fragmentMenuDex">
 
     <fragment
         android:id="@+id/fragmentMenuDex"
@@ -55,31 +55,6 @@
         <action
             android:id="@+id/action_saidaFragment_to_configuracoesFragment"
             app:destination="@id/configuracoesFragment" />
-        <action
-            android:id="@+id/action_saidaFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/cadastroFragment"
-        android:name="com.example.pokedex.Features.Cadastro.View.CadastroFragment"
-        android:label="CadastroFragment" >
-        <action
-            android:id="@+id/action_cadastroFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_cadastroFragment_to_fragmentMenuDex"
-            app:destination="@id/fragmentMenuDex" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.pokedex.Features.Login.View.LoginFragment"
-        android:label="LoginFragment" >
-        <action
-            android:id="@+id/action_loginFragment_to_cadastroFragment"
-            app:destination="@id/cadastroFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_fragmentMenuDex"
-            app:destination="@id/fragmentMenuDex" />
     </fragment>
     <fragment
         android:id="@+id/itemFragment"
