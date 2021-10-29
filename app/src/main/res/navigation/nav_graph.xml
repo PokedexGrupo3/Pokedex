@@ -7,16 +7,65 @@
 
     <fragment
         android:id="@+id/fragmentMenuDex"
-        android:name="com.example.pokedex.MenuDexFragment"
+        android:name="com.example.pokedex.Features.ApenasViews.MenuDexFragment"
         android:label="fragment_menu_dex"
         tools:layout="@layout/fragment_menu_dex" >
         <action
             android:id="@+id/action_fragmentMenuDex_to_pokemonDataFragment"
             app:destination="@id/pokemonDataFragment" />
+        <action
+            android:id="@+id/action_fragmentMenuDex_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
+        <action
+            android:id="@+id/action_fragmentMenuDex_to_itemFragment"
+            app:destination="@id/itemFragment" />
     </fragment>
     <fragment
         android:id="@+id/pokemonDataFragment"
-        android:name="com.example.pokedex.PokemonDataFragment"
+        android:name="com.example.pokedex.Features.PokemonData.View.PokemonDataFragment"
         android:label="fragment_pokemon_data"
-        tools:layout="@layout/fragment_pokemon_data" />
+        tools:layout="@layout/fragment_pokemon_data" >
+        <action
+            android:id="@+id/action_pokemonDataFragment_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
+        <action
+            android:id="@+id/action_pokemonDataFragment_to_fragmentMenuDex"
+            app:destination="@id/fragmentMenuDex" />
+        <action
+            android:id="@+id/action_pokemonDataFragment_to_configuracoesFragment2"
+            app:destination="@id/configuracoesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracoesFragment"
+        android:name="com.example.pokedex.Features.Configuracoes.View.ConfiguracoesFragment"
+        android:label="fragment_configuracoes"
+        tools:layout="@layout/fragment_configuracoes" >
+        <action
+            android:id="@+id/action_configuracoesFragment_to_saidaFragment"
+            app:destination="@id/saidaFragment" />
+        <action
+            android:id="@+id/action_configuracoesFragment_to_fragmentMenuDex"
+            app:destination="@id/fragmentMenuDex" />
+    </fragment>
+    <fragment
+        android:id="@+id/saidaFragment"
+        android:name="com.example.pokedex.Features.ApenasViews.SaidaFragment"
+        android:label="fragment_saida"
+        tools:layout="@layout/fragment_saida" >
+        <action
+            android:id="@+id/action_saidaFragment_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.example.pokedex.Features.Login.View.LoginFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_fragmentMenuDex"
+            app:destination="@id/fragmentMenuDex" />
+        <action
+            android:id="@+id/action_loginFragment_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
+    </fragment>
 </navigation>

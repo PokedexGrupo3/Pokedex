@@ -4,83 +4,245 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5154"
-    tools:context=".MenuDexFragment">
+    android:background="@color/Pink"
+    tools:context=".Features.ApenasViews.MenuDexFragment">
 
 
     <ImageView
-        android:id="@+id/imgPokedex"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_margin="20dp"
+        android:id="@+id/imgPokebola"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/pokedex_pokedexedit"
-        android:contentDescription="Pokedex"/>
+        app:srcCompat="@drawable/poke" />
 
-    <ImageView
-        android:id="@+id/imgDex2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="20dp"
+    <ImageButton
+        android:id="@+id/ivGear"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgPokedex"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/pokedex_pokedexedit"/>
+        android:backgroundTint="@color/Pink"
+        android:src="@drawable/ic_baseline_add_24"
+        tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/imgDex3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgPokedex"
-        app:layout_constraintTop_toBottomOf="@id/imgDex2"
-        android:src="@drawable/pokedex_pokedexedit"/>
 
-    <ImageView
-        android:id="@+id/imgDex4"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgPokedex"
-        android:src="@drawable/pokedex_pokedexedit"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPokebola"
+        tools:layout_editor_absoluteX="10dp">
 
-    <ImageView
-        android:id="@+id/imgDex6"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgDex4"
-        android:src="@drawable/pokedex_pokedexedit"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-    <ImageView
-        android:id="@+id/imgDex7"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toEndOf="@id/imgDex6"
-        app:layout_constraintTop_toBottomOf="@id/imgDex4"
-        android:src="@drawable/pokedex_pokedexedit"/>
 
-    <ImageView
-        android:id="@+id/imgDex8"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toEndOf="@id/imgDex7"
-        app:layout_constraintTop_toBottomOf="@id/imgDex4"
-        android:src="@drawable/pokedex_pokedexedit"/>
 
-    <ImageView
-        android:id="@+id/imgDex9"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toEndOf="@id/imgDex6"
-        app:layout_constraintTop_toBottomOf="@id/imgDex7"
-        android:src="@drawable/pokedex_pokedexedit"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgPokedex1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/Pink"
+            app:cardCornerRadius="19dp"
+            app:cardElevation="6dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:text="Pokemon"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="-32dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginBottom="-16dp"
+                android:adjustViewBounds="true"
+                android:alpha="0.25"
+                android:src="@drawable/pokeball"
+                app:tint="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgPokedex2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/blue"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="50dp"
+                    android:text="Item"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-32dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginBottom="-16dp"
+                    android:adjustViewBounds="true"
+                    android:alpha="0.25"
+                    android:src="@drawable/pokeball"
+                    app:tint="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgPokedex3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/brown"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="50dp"
+                    android:text="Moves"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-32dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginBottom="-16dp"
+                    android:adjustViewBounds="true"
+                    android:alpha="0.25"
+                    android:src="@drawable/pokeball"
+                    app:tint="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgPokedex4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/Bug"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="50dp"
+                    android:text="Generation"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-32dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginBottom="-16dp"
+                    android:adjustViewBounds="true"
+                    android:alpha="0.25"
+                    android:src="@drawable/pokeball"
+                    app:tint="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgPokedex5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/Rock"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="50dp"
+                    android:text="My team"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-32dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginBottom="-16dp"
+                    android:adjustViewBounds="true"
+                    android:alpha="0.25"
+                    android:src="@drawable/pokeball"
+                    app:tint="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
