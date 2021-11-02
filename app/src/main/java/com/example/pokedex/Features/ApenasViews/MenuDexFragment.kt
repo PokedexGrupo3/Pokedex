@@ -1,4 +1,4 @@
-package com.example.pokedex
+package com.example.pokedex.Features.ApenasViews
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.pokedex.R
 import com.example.pokedex.databinding.FragmentMenuDexBinding
-import com.example.pokedex.databinding.FragmentPokemonDataBinding
 
 
 class MenuDexFragment : Fragment() {
@@ -31,10 +31,17 @@ class MenuDexFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.imgPokedex?.setOnClickListener(){
+        binding?.imgPokedex?.setOnClickListener{
             findNavController().navigate(R.id.action_fragmentMenuDex_to_pokemonDataFragment)
         }
 
+        binding?.ivGear?.setOnClickListener{
+            findNavController().navigate(R.id.action_fragmentMenuDex_to_configuracoesFragment)
+        }
+
+        binding?.imgDex3?.setOnClickListener{
+            findNavController().navigate(R.id.action_fragmentMenuDex_to_itemFragment)
+        }
     }
 
     override fun onDestroyView() {
